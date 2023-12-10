@@ -1,5 +1,4 @@
 # moebius-hypermedia
-# adding Ne fait plus tache on 2023-08-21
 # To create a new publication, you must create a new branch with the name of the artwork. 
 # Once the branch is deployed, create a new subdomain on the dev.revuemoebius@gmail.com Vercel account at https://vercel.com/devrevuemoebius-gmailcom/moebius-hypermedia/settings/domains 
 # The branch should be assigned to that subdomain in order to upload properly, do this once you finish the next step
