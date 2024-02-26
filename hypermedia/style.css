@@ -98,6 +98,7 @@ section {
 }
 
 .hidden {
+  /* background: red; */
   opacity: 0;
 }
 

@@ -82,8 +82,9 @@ function handleIntersection(entries, observer) {
 }
 
 // Create an intersection observer
-const observer = new IntersectionObserver(handleIntersection);
-
+const observer = new IntersectionObserver(handleIntersection, {
+  threshold: 0.5
+});
 // Start observing the textContainer
 observer.observe(textContainer);
 
