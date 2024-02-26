@@ -33,50 +33,70 @@
 </html>
 
 <script>
-  function activateFullscreen() {
-    const iFrameGame = document.getElementById('iframe-game');
-    
-    if (iFrameGame.requestFullscreen) {
-      iFrameGame.requestFullscreen();
-    } else if (iFrameGame.mozRequestFullScreen) {
-      iFrameGame.mozRequestFullScreen();
-    } else if (iFrameGame.webkitRequestFullscreen) {
-      iFrameGame.webkitRequestFullscreen();
-    } else if (iFrameGame.msRequestFullscreen) {
-      iFrameGame.msRequestFullscreen();
-    }
-  }
-
-  const gameContainer = document.getElementById('game-container')
-  const gameThumbnail = document.getElementById('game-thumbnail')
- 
-  gameContainer.addEventListener('click', () => {
-    gameThumbnail.classList.toggle('hidden')
-    gameThumbnail.style.cursor = "wait";
-    
-    if (gameThumbnail.classList.contains('hidden')) {
-      setTimeout(() => {
-        gameThumbnail.style.display = 'none'
-        gameThumbnail.style.cursor = "unset";
-      }, 2800);
-    }
-    else {
-      gameThumbnail.style.display = 'block'
-    }
-  })
-
-  const textContainer = document.getElementById('text-container')
-  const hiddenLineImg = document.getElementById('hidden-line-img')
-
-  textContainer.addEventListener('mouseenter', () => {
-    hiddenLineImg.classList.toggle('hidden')
-  })
-  textContainer.addEventListener('mouseleave', () => {
-    hiddenLineImg.classList.toggle('hidden')
-  })
-
-  textContainer.addEventListener('click', () => {
-    hiddenLineImg.classList.toggle('hidden')
-  })
+function activateFullscreen() {
+  const iFrameGame = document.getElementById('iframe-game');
   
+  if (iFrameGame.requestFullscreen) {
+    iFrameGame.requestFullscreen();
+  } else if (iFrameGame.mozRequestFullScreen) {
+    iFrameGame.mozRequestFullScreen();
+  } else if (iFrameGame.webkitRequestFullscreen) {
+    iFrameGame.webkitRequestFullscreen();
+  } else if (iFrameGame.msRequestFullscreen) {
+    iFrameGame.msRequestFullscreen();
+  }
+}
+
+const gameContainer = document.getElementById('game-container');
+const gameThumbnail = document.getElementById('game-thumbnail');
+
+gameContainer.addEventListener('click', () => {
+  gameThumbnail.classList.toggle('hidden');
+  gameThumbnail.style.cursor = "wait";
+  
+  if (gameThumbnail.classList.contains('hidden')) {
+    setTimeout(() => {
+      gameThumbnail.style.display = 'none';
+      gameThumbnail.style.cursor = "unset";
+    }, 2800);
+  }
+  else {
+    gameThumbnail.style.display = 'block';
+  }
+});
+
+const textContainer = document.getElementById('text-container');
+const hiddenLineImg = document.getElementById('hidden-line-img');
+
+// Function to handle the intersection observer callback
+function handleIntersection(entries, observer) {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      // Element is in view
+      hiddenLineImg.classList.remove('hidden');
+    } else {
+      // Element is out of view
+      hiddenLineImg.classList.add('hidden');
+    }
+  });
+}
+
+// Create an intersection observer
+const observer = new IntersectionObserver(handleIntersection);
+
+// Start observing the textContainer
+observer.observe(textContainer);
+
+// textContainer.addEventListener('mouseenter', () => {
+//   hiddenLineImg.classList.toggle('hidden');
+// });
+
+// textContainer.addEventListener('mouseleave', () => {
+//   hiddenLineImg.classList.toggle('hidden');
+// });
+
+// textContainer.addEventListener('click', () => {
+//   hiddenLineImg.classList.toggle('hidden');
+// });
+
 </script>
