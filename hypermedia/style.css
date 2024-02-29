@@ -26,6 +26,11 @@ body, html {
     overflow-x: hidden;
     display: grid;
     place-items: center;
+    position: relative;
+    img {
+      width: 100%;
+      height: auto;
+    }
   }
 }
 
