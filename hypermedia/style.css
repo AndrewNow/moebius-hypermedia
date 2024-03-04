@@ -34,7 +34,7 @@ body, html {
 .mobile-image {
   aspect-ratio: 390/844;
   width: 100%;
-  min-width: 390px;
+  width: 390px;
   height: auto;
   min-height: 844px;
   max-height: 100vh;
