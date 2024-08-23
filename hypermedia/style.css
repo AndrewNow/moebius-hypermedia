@@ -8,6 +8,7 @@ body, html {
 .cell {
   width: 100vw;
   height: 100vh;
+  min-width: 500px;
   position: relative;
 }
 
@@ -43,21 +44,21 @@ body, html {
 }
 .worm-white {
   aspect-ratio: 2944/1830;
-  width: 70vw;
+  width: 70%;
   height: auto;
   transform: translateY(60%);
 }
 
 .text {
   aspect-ratio: 9464/2858;
-  width: 100vw;
+  width: 100%;
   height: auto;
   transform: translate(-20%, 40%);
 }
 
 .worm-yellow {
   aspect-ratio: 2944/1830;
-  width: 100vw;
+  width: 100%;
   height: auto;
   transform: translate(5%, -5%);
 }
@@ -65,7 +66,7 @@ body, html {
 .worm-animated {
   z-index: 2;
   aspect-ratio: 1920/1080;
-  width: 110vw;
+  width: 110%;
   height: auto;
   transform: translate(-45%, -10%);
 }
@@ -73,13 +74,13 @@ body, html {
 .face-animated {
   z-index: 1;
   aspect-ratio: 1/1;
-  width: 50vw;
+  width: 50%;
   transform: translate(-40%, -25%);
 }
 
 .worm-green {
   aspect-ratio: 3852/1749;
-  width: 130vw;
+  width: 130%;
   height: auto;
   transform: translate(-55%, -45%);
 }
