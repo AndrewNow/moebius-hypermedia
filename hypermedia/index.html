@@ -3,104 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kitten</title>
+    <title>carolann</title>
     <link rel="stylesheet" type="text/css" href="style.css">
     <meta property="og:image" content="https://i.imgur.com/HHbjMwW.jpeg" />
 </head>
 <body>
-  <div class="horizontal-scroll-container">
-    <section>
-      <div class="iframe-wrapper" id="game-container">
-        <img src="https://i.imgur.com/kzsJYxb.jpeg" alt="Game thumbnail" id="game-thumbnail">
-        <iframe id="iframe-game" src="https://i.simmer.io/@mauvv/kitten"></iframe>
-      </div>
-      <button class="fullscreen" onclick="activateFullscreen()" aria-label="Plein écran">
-        <img src="https://i.imgur.com/9kGkfYh.png" class="fs" width="50" height="50" />
-      </button>
-  </section>
-  <section class="centered-section">
-    <div class="text-container" id="text-container">
-      <img src="https://i.imgur.com/kIOGd3I.png" class="text" width="900" height="900" />
-      <img src="https://i.imgur.com/rEJK5tp.png" class="text hidden" id="hidden-line-img" width="900" height="900" />
-
+  <div class="row">
+    <div class="cell row1 r1-c1">
+      <img src="/media/vers-blanc.png" alt="" class="image worm-white">
     </div>
-  </section>
-  <section class="centered-section">
-    <img src="https://i.imgur.com/BY8z2nj.gif" class="gif"/>
-  </section>
-</div>
-<div class="mobile">
-  <img class="mobile-image" src="https://i.imgur.com/QiiiHwt.jpeg" alt="Mobile" width="390" height="844" />
-</div>
+    <div class="cell row1 r1-c2">
+      <img src="/media/texte-600.png" alt="" class="image text">
+    </div>
+    <div class="cell row1 r1-c3">
+       <img src="/media/vers-jaune.png" alt="" class="image worm-yellow">
+      </div>
+      <div class="cell row1 r1-c4"></div>
+      <div class="cell row1 r1-c5"></div>
+    </div>
+    <div class="row">
+      <div class="cell row1 r2-c1"></div>
+      <div class="cell row1 r2-c2">
+      <img src="/media/vers-anim.gif" alt="" class="image worm-animated">
+    </div>
+    <div class="cell row1 r2-c3"></div>
+    <div class="cell row1 r2-c4">
+      <img src="/media/face01.gif" alt="" class="image face-animated">
+    </div>
+    <div class="cell row1 r2-c5">
+       <img src="/media/vers-vert.png" alt="" class="image worm-green">
+    </div>
+  </div>
 </body>
 </html>
 
 <script>
-function activateFullscreen() {
-  const iFrameGame = document.getElementById('iframe-game');
-  
-  if (iFrameGame.requestFullscreen) {
-    iFrameGame.requestFullscreen();
-  } else if (iFrameGame.mozRequestFullScreen) {
-    iFrameGame.mozRequestFullScreen();
-  } else if (iFrameGame.webkitRequestFullscreen) {
-    iFrameGame.webkitRequestFullscreen();
-  } else if (iFrameGame.msRequestFullscreen) {
-    iFrameGame.msRequestFullscreen();
-  }
-}
-
-const gameContainer = document.getElementById('game-container');
-const gameThumbnail = document.getElementById('game-thumbnail');
-
-gameContainer.addEventListener('click', () => {
-  gameThumbnail.classList.toggle('hidden');
-  gameThumbnail.style.cursor = "wait";
-  
-  if (gameThumbnail.classList.contains('hidden')) {
-    setTimeout(() => {
-      gameThumbnail.style.display = 'none';
-      gameThumbnail.style.cursor = "unset";
-    }, 2800);
-  }
-  else {
-    gameThumbnail.style.display = 'block';
-  }
-});
-
-const textContainer = document.getElementById('text-container');
-const hiddenLineImg = document.getElementById('hidden-line-img');
-
-// Function to handle the intersection observer callback
-function handleIntersection(entries, observer) {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      // Element is in view
-      hiddenLineImg.classList.remove('hidden');
-    } else {
-      // Element is out of view
-      hiddenLineImg.classList.add('hidden');
-    }
-  });
-}
-
-// Create an intersection observer
-const observer = new IntersectionObserver(handleIntersection, {
-  threshold: 0.85
-});
-// Start observing the textContainer
-observer.observe(textContainer);
-
-// textContainer.addEventListener('mouseenter', () => {
-//   hiddenLineImg.classList.toggle('hidden');
-// });
-
-// textContainer.addEventListener('mouseleave', () => {
-//   hiddenLineImg.classList.toggle('hidden');
-// });
-
-// textContainer.addEventListener('click', () => {
-//   hiddenLineImg.classList.toggle('hidden');
-// });
 
 </script>
