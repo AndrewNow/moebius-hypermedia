@@ -102,29 +102,29 @@ body, html {
   }
   .worm-white {
     aspect-ratio: 2944/1830;
-    width: 80%;
+    width: 60%;
     height: auto;
-    transform: translateY(60%);
+    transform: translateY(100%);
   }
 
   .text {
     aspect-ratio: 9464/2858;
-    width: 80%;
+    width: 60%;
     height: auto;
-    transform: translate(30%, 100%);
+    transform: translate(20%, 150%);
   }
 
   .worm-yellow {
     aspect-ratio: 2944/1830;
     width: 80%;
     height: auto;
-    transform: translate(80%, 20%);
+    transform: translate(20%, 40%);
   }
 
   .worm-animated {
     z-index: 2;
     aspect-ratio: 1920/1080;
-    width: 80%;
+    width: 90%;
     height: auto;
     transform: translate(-5%, -10%);
   }
@@ -133,7 +133,7 @@ body, html {
     z-index: 1;
     aspect-ratio: 1/1;
     width: 30%;
-    transform: translate(70%, -100%);
+    transform: translate(150%, -120%);
   }
   .yt-video {
   aspect-ratio: 16/9;
@@ -147,8 +147,8 @@ body, html {
 
   .worm-green {
     aspect-ratio: 3852/1749;
-    width: 80%;
+    width: 90%;
     height: auto;
-    transform: translate(20%, -45%);
+    transform: translate(10%, -45%);
   }
 }
