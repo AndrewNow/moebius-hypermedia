@@ -33,7 +33,6 @@ body, html {
 .r2-c1 {}
 .r2-c2 {}
 .r2-c3 {
-  background: grey;
 }
 .r2-c4 {}
 .r2-c5 {}
@@ -98,13 +97,10 @@ body, html {
 
 @media (max-width: 576px) {
   .cell {
-  width: 200vw;
-  height: 100vh;
-  border: 1px solid red;
+    width: 200vw;
+    height: 100vh;
   }
-  .image {
-  }
-    .worm-white {
+  .worm-white {
     aspect-ratio: 2944/1830;
     width: 80%;
     height: auto;
@@ -141,13 +137,12 @@ body, html {
   }
   .yt-video {
   aspect-ratio: 16/9;
-  height: 40vh;
-  width: auto;
+  height: auto;
+  width: 90vw;
   z-index: 10;
   bottom: 0%;
   top: 0%;
   left: 50%;
-  border: 1px solid pink;
 }
 
   .worm-green {
